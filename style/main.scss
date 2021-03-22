@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;400;800&display=swap");
+
+$base-color: #22b573;
+$base-text: #f2f2f2;
+$dark-background: #1c1717;
+$light-background: #f2f2f2;
+$colored-text: #fcb84c;
+$light-text: #eae9e4;
+$dark-text: #323d3d;
+
+body {
+	background-color: $base-color;
+	font-family: Overpass;
+
+	h1 {
+		color: $base-text;
+		font-size: 3.5vw;
+
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		text-align: center;
+	}
+	.articles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 60px;
+
+		div {
+			padding: 30px;
+			padding-right: 45px;
+			max-width: 250px;
+
+			background-color: $dark-background;
+			color: $light-text;
+
+			line-height: 1.5;
+
+			h2 {
+				color: $colored-text;
+				font-weight: 400;
+				font-size: 1.2rem;
+				margin: 0.5em 0;
+			}
+			&:nth-child(even) {
+				background-color: $light-background;
+				color: $dark-text;
+			}
+		}
+		.article::after {
+			content: "Read more";
+			font-weight: 800;
+			color: $colored-text;
+			text-transform: uppercase;
+		}
+		.video {
+			width: 250px;
+
+			&::after {
+				content: "Watch";
+				font-weight: 800;
+				color: $colored-text;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
